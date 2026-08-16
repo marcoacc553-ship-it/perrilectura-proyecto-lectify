@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5a3d8c">
+  <title>PerriLectura</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">APRENDE Y CUIDA</p>
+        <h1>PerriLectura <span aria-hidden="true">🐾</span></h1>
+        <p class="subtitle">Cada lectura alimenta la curiosidad de tu mejor amigo.</p>
+      </div>
+      <button id="resetButton" class="text-button" type="button">Reiniciar progreso</button>
+    </header>
+
+    <section class="dashboard" aria-label="Tu progreso">
+      <article class="stat"><span>🔥</span><div><strong id="streakValue">0</strong><small>racha diaria</small></div></article>
+      <article class="stat"><span>🪙</span><div><strong id="coinsValue">0</strong><small>monedas</small></div></article>
+      <article class="stat"><span>📚</span><div><strong id="readingsValue">0</strong><small>lecturas logradas</small></div></article>
+    </section>
+
+    <section class="pet-card" aria-label="Tu mascota lectora">
+      <div class="pet-scene">
+        <div id="pet" class="pet hungry" role="img" aria-label="Perrito Luna">
+          <div class="ear left-ear"></div><div class="ear right-ear"></div>
+          <div class="face"><span class="eye">●</span><span class="eye">●</span><span class="nose">●</span><span id="mouth" class="mouth">⌣</span></div>
+          <div class="body"><span class="collar"></span><span class="tag">★</span><span class="tail">〰</span></div>
+        </div>
+        <div id="dinoPet" class="dino-pet" role="img" aria-label="Dinosaurio Nico" hidden>🦕</div>
+        <span id="food" class="food" aria-hidden="true">🍖</span>
+      </div>
+      <div class="pet-copy">
+        <p class="eyebrow">TU COMPAÑERO</p>
+        <h2 id="petTitle">Luna tiene hambre</h2>
+        <p id="petMessage">Lee y responde las preguntas para darle su comida de hoy.</p>
+        <button id="feedButton" class="primary-button" type="button">🍖 Alimentar a Luna</button>
+        <p id="dailyStatus" class="status" role="status"></p>
+        <div id="dinoUnlock" class="unlock-card" hidden>
+          <strong>¡Mascota desbloqueada! 🦕</strong>
+          <span>Completaste los 7 días base y ahora Nico puede acompañarte.</span>
+          <div class="pet-actions">
+            <button id="dogButton" class="pet-choice selected" type="button">🐶 Luna</button>
+            <button id="dinoButton" class="pet-choice" type="button">🦕 Nico</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress-card" aria-label="Progreso total">
+      <div class="progress-heading"><h2>Progreso de lectura</h2><strong id="progressText">0 / 7 días</strong></div>
+      <div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-fill"></div></div>
+      <p>Completa una lectura cada día para cuidar a Luna y mantener tu racha.</p>
+    </section>
+
+    <section id="readingSection" class="reading-card" hidden>
+      <div class="section-heading"><p class="eyebrow">LECTURA DEL DÍA</p><h2 id="readingTitle"></h2></div>
+      <p id="readingText" class="reading-text"></p>
+      <form id="quizForm" novalidate>
+        <fieldset id="questions"></fieldset>
+        <button class="primary-button" type="submit">Comprobar respuestas</button>
+        <p id="quizFeedback" class="feedback" role="alert"></p>
+      </form>
+    </section>
+  </main>
+  <footer>Hecho para leer, aprender y cuidar. 💜</footer>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
