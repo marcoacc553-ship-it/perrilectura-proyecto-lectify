@@ -9,7 +9,9 @@ Aplicación web educativa de una sola página. Lee el texto diario, responde las
 3. Lee y responde correctamente las tres preguntas.
 4. El progreso queda guardado en el navegador con `localStorage`.
 
-La aplicación usa la fecha local del equipo para impedir una segunda alimentación el mismo día. Incluye siete lecturas variadas que rotan cada semana. Al completar siete días distintos, se desbloquea a Nico, una mascota dinosaurio que puedes alternar con Luna.
+La aplicación usa la fecha local del equipo para impedir una segunda alimentación el mismo día. Incluye siete lecturas variadas que rotan cada semana. Luna y Nico, una mascota dinosaurio, viven juntos desde el primer día.
+
+Cada lectura correcta entrega 10 monedas. Abre la tienda con el botón **Tienda** de la parte superior para adoptar a Bruno el conejo (15 monedas), Mía la gatita (20), Toto la tortuga (25) y Pipo el pajarito (30). Las mascotas compradas quedan guardadas en tu parcela.
 
 La interfaz está optimizada para celulares y computadoras: usa un diseño adaptable y controles táctiles amplios.
 
